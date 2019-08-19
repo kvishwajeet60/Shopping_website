@@ -5,16 +5,13 @@ import java.util.Scanner;
 abstract class Customer {
 
 	private String name, address, mobileNumber;
-
 	private Integer age;
 
 Customer(String name, String address, Integer age, String mobile) {
-
 	this.name = name;
 	this.address = address;
 	this.age = age;
 	this.mobileNumber = mobile;
-
 }
 
 public String toString() {
@@ -31,8 +28,8 @@ class SeniorCitizenCustomer extends Customer {
 	}
 	
 	Double getBillAmount(Double amount) {
-		Double bill =null; //edit as per the question
-		//Write your code here of required
+		Double bill =null; 
+		bill =  amount*0.9;
 		return bill;
 	}
 
@@ -43,8 +40,8 @@ class PrivilegeCustomer extends Customer {
 			super(name, address, age, mobile);
 		}
 		Double getBillAmount(Double amount) {
-			Double bill = null; //edit as per the Question 
-			//write your code here if required.
+			Double bill = null;  
+			bill = amount * 0.7;
 			return bill;
 		}
 }
@@ -86,28 +83,17 @@ public class MediumQuestion1 {
 
 public static void takeInput() {
 
-		System.out.println("Enter the name: ");
-		
-		in.nextLine();
-		
-		name = in.nextLine();
-		
-		System.out.println("Enter the age: ");
-		
-		age = in.nextInt();
-		
-		System.out.println("Enter the address: ");
-		
-		in.nextLine();
-		
-		address = in.nextLine();
-		
-		System.out.println("Enter the mobile number: ");
-		
-		phn = in.nextLine();
-		
-		System.out.println("Enter the purchased amount: ");
-		
+		System.out.println("Enter the name: ");		
+		in.nextLine();		
+		name = in.nextLine();		
+		System.out.println("Enter the age: ");		
+		age = in.nextInt();		
+		System.out.println("Enter the address: ");		
+		in.nextLine();		
+		address = in.nextLine();		
+		System.out.println("Enter the mobile number: ");		
+		phn = in.nextLine();		
+		System.out.println("Enter the purchased amount: ");		
 		purchasedAmt = in.nextDouble();
 
 	}
